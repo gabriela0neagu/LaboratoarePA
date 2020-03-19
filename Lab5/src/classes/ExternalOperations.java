@@ -35,10 +35,14 @@ public class ExternalOperations {
         }
 
         public static void view (Document doc) throws IOException {
-            Desktop desktop = Desktop.getDesktop();
-            String filePath = doc.getPath();
-            File file = new File(filePath);
+            try {
+                Desktop desktop = Desktop.getDesktop();
+                String filePath = doc.getPath();
+                File file = new File(filePath);
 
-            desktop.open(file);
+                desktop.open(file);
+            } catch (Exception e) {
+                System.out.println(Arrays.toString(e.getStackTrace()));
+            }
         }
     }

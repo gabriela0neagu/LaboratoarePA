@@ -9,7 +9,7 @@ public class Catalog implements Serializable {
     private String path;
     private List<Document> documents = new ArrayList<Document>();
 
-    public Catalog(String name, String path){
+    public Catalog(String name, String path) {
         this.name = name;
         this.path = path;
     }
@@ -30,11 +30,11 @@ public class Catalog implements Serializable {
         return documents;
     }
 
-    public Document findById(String id){
-        for(Document doc : documents)
-        {
-            if(doc.getId()==id)
+    public Document findById(String id) {
+        for (Document doc : documents) {
+            if (doc.getId().equals(id)) {
                 return doc;
+            }
         }
         return null;
     }

@@ -2,13 +2,14 @@ package classes;
 
 import javax.swing.*;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 import static java.lang.Thread.sleep;
 
 public class Player implements Runnable {
 
-    ArrayList<Token> playersTokens = new ArrayList<Token>();
+    List<Token> playersTokens = new ArrayList<Token>();
     volatile Board board;
     int points = 0;
     public int givenValueK;
@@ -55,7 +56,7 @@ public class Player implements Runnable {
         sleep(200);
     }
 
-    public int longestAp(ArrayList<Token> tokens)
+    public int longestAp(List<Token> tokens)
     {
         int len = tokens.size();
         int max = 1;

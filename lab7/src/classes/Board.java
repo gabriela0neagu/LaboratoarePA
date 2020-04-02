@@ -1,11 +1,12 @@
 package classes;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 public class Board {
     public int givenNumberN;
-    public ArrayList<Token> tokens = new ArrayList<Token>();
+    public List<Token> tokens = new ArrayList<Token>();
 
     Board(int n, int m) {
         givenNumberN = n;
